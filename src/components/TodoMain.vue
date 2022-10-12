@@ -44,7 +44,7 @@ export default {
             set(value){
                 console.log(value)
                 // 但是这里 list 的是通过 props获取得到的,而props的值是只读的不能直接修改
-                // this.list.farEach(item.isDone=value)
+                // this.list.forEach(item=>item.isDone=value)
                 // 所以需要将得到的结果给父元素，由父元素来操作数据
                 this.$emit('checkAll',value)
             }
